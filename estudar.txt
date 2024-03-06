@@ -1,0 +1,3 @@
+escopo de variável
+variável nomeada
+mapas -> estrutura de dados do tipo dicionário
