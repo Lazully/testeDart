@@ -31,9 +31,9 @@ class Pessoa {
 
 void main() {
   String x = '';
-  Pessoa p1 = Pessoa('Suga', '30', true, 'suga@hybe.com'); //construtor
-  Pessoa p2 = Pessoa('Hobi', '30', true, 'hobi@hybe.com');
-  Pessoa p3 = Pessoa('IU', '30', false);
+  Pessoa p1 = Pessoa('Suga', 30, true, 'suga@hybe.com'); //construtor
+  Pessoa p2 = Pessoa('Hobi', 30, true, 'hobi@hybe.com');
+  Pessoa p3 = Pessoa('IU', 30, false);
 
   print('Email do p1 = ${p1.email}');
   p1.falaNome();
@@ -41,4 +41,23 @@ void main() {
   print('Email do p3 = ${p3.email}');
   p1.email = 'suga@hybe.com';
   print('Email do p1 = ${p1.email}');
+
+  List<int> abc = [];
+  List<Pessoa> listaPessoas = [p1, p2, p3];
+
+  listaPessoas.forEach((element) {
+    element.falaNome();
+  });
+
+  Map<String, Pessoa> mapaDePessoas = {
+    'pessoa1': p1,
+    'pessoa2': p2,
+    'pessoa3': p3
+  };
+
+  mapaDePessoas.forEach((key, value) {
+    print('Valor da CHAVE: $key');
+    print("========");
+    value.falaNome();
+  });
 }
