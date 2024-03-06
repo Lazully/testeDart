@@ -19,12 +19,12 @@ void main() {
         print("Informe o item ${i + 1} da sua lista de compras:");
         String? itemCompra = stdin.readLineSync();
         lista.add(itemCompra!);
+      }
 
-        print("Pronto! Agora vamos ver como ficou a lista.");
+      print("Pronto! Agora vamos ver como ficou a lista.");
 
-        for (int i = 0; i < lista.length; i++) {
-          print(lista[i]);
-        }
+      for (int i = 0; i < lista.length; i++) {
+        print(lista[i]);
       }
 
     case '2':
@@ -37,8 +37,13 @@ void main() {
       usuario['idade'] = 30;
 
 // Exibir cada par chave-valor usando um loop for-in
-      for (let chave in usuario) {
-        print('Chave: ${chave}, Valor: ${usuario[chave]}');
-      }
+      usuario.forEach((nome, idade) {
+        print(usuario);
+      });
+
+      break;
+
+    default:
+      print("Opção inválida! ");
   }
 }

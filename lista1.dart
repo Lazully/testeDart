@@ -10,9 +10,11 @@ void main() {
       int n1, n2, soma;
 
       print("Digite o 1º número: ");
-      n1 = int.parse(stdin.readLineSync()!); //converte uma string (entrada) em int
+      n1 = int.parse(
+          stdin.readLineSync()!); //converte uma string (entrada) em int
       print("Digite o 2º número: ");
-      n2 = int.parse(stdin.readLineSync()!); //converte uma string (entrada) em int
+      n2 = int.parse(
+          stdin.readLineSync()!); //converte uma string (entrada) em int
 
       soma = n1 + n2;
 
@@ -37,7 +39,8 @@ void main() {
       int num;
 
       print("Digite qualquer número: ");
-      num = int.parse(stdin.readLineSync()!); //converte uma string (entrada) em int
+      num = int.parse(
+          stdin.readLineSync()!); //converte uma string (entrada) em int
 
       if (num % 2 == 0) {
         print("Número par!");
@@ -96,7 +99,7 @@ void main() {
     //8 - Crie um programa que exiba o dia da semana com base em um número (1 para Domingo, 2 para Segunda, etc.).
     case '8':
       int num;
-      print("Digite um número entre 1 e 0: ");
+      print("Digite um número entre 1 e 7: ");
       num = int.parse(
           stdin.readLineSync()!); //converte uma string (entrada) em int
 
@@ -115,8 +118,9 @@ void main() {
           print("Sexta - feira!");
         case 7:
           print("Sábado!");
+        default:
+          ("Opção inválida!");
       }
-      break;
 
     //9 - Imprima os números pares de 1 a 10 usando um loop while.
     case '9':
